@@ -2,6 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -65,12 +66,12 @@ const HeroSlider = () => {
                         {slide.desc}
                       </p>
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-[var(--color-primary)] text-white px-8 py-4 uppercase tracking-[2px] text-sm hover:bg-slate-900 hover:text-white transition-colors duration-300 rounded-lg shadow-lg shadow-[var(--color-primary)]/30 hover:shadow-none font-bold">
+                        <Link to="/shop" className="bg-[var(--color-primary)] text-white px-8 py-4 uppercase tracking-[2px] text-sm hover:bg-slate-900 hover:text-white transition-colors duration-300 rounded-lg shadow-lg shadow-[var(--color-primary)]/30 hover:shadow-none font-bold inline-block">
                           Order Now
-                        </button>
-                        <button className="bg-transparent border-2 border-white text-white px-8 py-4 uppercase tracking-[2px] text-sm hover:bg-white hover:text-slate-900 transition-colors duration-300 rounded-lg backdrop-blur-sm font-bold shadow-lg">
+                        </Link>
+                        <Link to="/menu" className="bg-transparent border-2 border-white text-white px-8 py-4 uppercase tracking-[2px] text-sm hover:bg-white hover:text-slate-900 transition-colors duration-300 rounded-lg backdrop-blur-sm font-bold shadow-lg inline-block">
                           View Menu
-                        </button>
+                        </Link>
                       </div>
                     </motion.div>
                   )}
