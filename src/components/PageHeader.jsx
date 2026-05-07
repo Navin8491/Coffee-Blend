@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const PageHeader = ({ title, bgImage }) => {
   return (
@@ -15,7 +16,7 @@ const PageHeader = ({ title, bgImage }) => {
             {title}
           </h1>
           <div className="flex justify-center items-center gap-2 mt-4 text-sm font-medium uppercase tracking-wider">
-            <span className="text-white hover:text-[var(--color-primary)] cursor-pointer transition-colors drop-shadow">Home</span>
+            <Link to="/" className="text-white hover:text-[var(--color-primary)] cursor-pointer transition-colors drop-shadow">Home</Link>
             <span className="text-slate-300 drop-shadow">&gt;</span>
             <span className="text-[var(--color-primary)] drop-shadow">{title}</span>
           </div>
